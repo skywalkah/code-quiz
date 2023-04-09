@@ -2,7 +2,7 @@
   --white: #fff;
   --vanilla: #f2e3c6;
   --light-blue: #c0c7cf;
-  --dark-blue: #2b2b2b;
+  --dark: #2b2b2b;
   --warning: #e6324b;
   --warningHover: #ff3957;
 
@@ -13,7 +13,7 @@
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background-color: var(--dark-blue);
+  background-color: var(--dark);
   color: var(--light-blue);
   font-weight: 400;
 }
@@ -29,6 +29,7 @@ h4 {
 h1 {
   font-size: 1.5rem;
   margin-bottom: var(--spacing);
+  line-height: 2rem;
 }
 
 p {
@@ -55,7 +56,7 @@ a {
 }
 
 a:hover {
-    color: var(--white);
+  color: var(--white);
 }
 
 section {
@@ -65,7 +66,7 @@ section {
   border-radius: 10px;
   border-width: 2px;
   box-shadow: 0 29px 52px rgba(0, 0, 0, 0.4), 0 25px 16px rgba(0, 0, 0, 0.2);
-  color: var(--dark-blue);
+  color: var(--dark);
   font-size: 18px;
   margin: 0 auto;
   padding: 30px;
@@ -77,10 +78,25 @@ section {
   }
 }
 
-#high-scores {
-    margin-bottom: var(--spacing);
+.intro-text {
+    text-align: center;
 }
 
+#high-scores {
+  margin-bottom: var(--spacing);
+}
+
+#initials {
+  line-height: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid var(--dark);
+  border-radius: 0.5rem;
+  max-width: 100px;
+}
+#initials:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
 .button-wrapper {
   display: flex;
   flex-direction: column;
@@ -89,8 +105,8 @@ section {
 }
 
 .button {
-  background-color: var(--dark-blue);
-  opacity: .9;
+  background-color: var(--dark);
+  opacity: 0.9;
   border: none;
   border-radius: 0.5rem;
   box-sizing: border-box;
@@ -106,7 +122,9 @@ section {
   touch-action: manipulation;
   width: auto;
   margin: 0;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .button-wrapper .button {
@@ -129,8 +147,7 @@ section {
 }
 
 button#start-quiz {
-    background-color: #7ab317;
-    
+  background-color: #7ab317;
 }
 
 @media (min-width: 768px) {
@@ -153,4 +170,20 @@ button#start-quiz {
 .warning {
   background-color: var(--warning);
   color: var(--white);
+}
+
+#choices .button {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--spacing);
+}
+#high-scores li {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #b4a994;
+}
+#high-scores li:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
 }

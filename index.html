@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <a href="highscore.html"> Highscores </a>
+      <a href="highscore.html">Highscores</a>
       <div class="timer-wrapper">
         Time:
         <span id="timer-cont">0</span>
@@ -17,13 +17,36 @@
     </header>
     <main>
       <section id="main-stage">
-        <h1>Code Quiz</h1>
-        <p>
-          Try to answer the following Javascript-related questions within the
-          time limit. Keep in mind that incorrect answers will penalize your
-          score/time by 10 seconds!
-        </p>
-        <button class="button" id="start-quiz">Start quiz!</button>
+
+        <div class="intro-text">
+          <h1>Code Quiz</h1>
+          <p>
+            Try to answer the following Javascript-related questions within the
+            time limit. Keep in mind that incorrect answers will penalize your
+            score/time by 10 seconds!
+          </p>
+          <button class="button" id="start-quiz">Start quiz!</button>
+        </div>
+
+        <div id="quiz-container" style="display: none">
+          <h1 id="question"></h1>
+          <div id="choices">
+            <button id="choice-a" class="button"></button>
+            <button id="choice-b" class="button"></button>
+            <button id="choice-c" class="button"></button>
+            <button id="choice-d" class="button"></button>
+          </div>
+          <div id="status"></div>
+        </div>
+
+        <div id="game-over" style="display:none">
+          <h1>All done!</h1>
+          <p>Your final score is <span id="score"></span>.</p>
+          <label for="initials">Enter your initials:</label>
+          <input type="text" id="initials" maxlength="3">
+          <button id="submit-score" class="button">Submit Score</button>
+        </div>
+
       </section>
     </main>
 

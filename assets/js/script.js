@@ -55,6 +55,16 @@ let score = 0;
 let timeLeft = 60;
 let timerId;
 
+// Update the timer
+function updateTimer() {
+    timeLeft--;
+    timerEl.textContent = timeLeft;
+    if (timeLeft <= 0) {
+        gameOver();
+    }
+}
+
+// Start the game function
 function startGame(event) {
     // Prevent reloading
     event.preventDefault();
@@ -75,15 +85,6 @@ function showQuestion() {
     choiceB.textContent = q.b;
     choiceC.textContent = q.c;
     choiceD.textContent = q.d;
-}
-
-// Update the timer
-function updateTimer() {
-    timeLeft--;
-    timerEl.textContent = timeLeft;
-    if (timeLeft <= 0) {
-        gameOver();
-    }
 }
 
 // Check if the answer is correct ot not

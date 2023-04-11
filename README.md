@@ -1,4 +1,4 @@
-# Web APIs: Code Quiz challenge
+# Web APIs: Javascript Quiz challenge
 ## Description
 Bootcamp week 4 Web APIs challenge where we create a timed Javascript Quiz Game that stores high scores.
 ## Installation

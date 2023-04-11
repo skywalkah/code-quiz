@@ -72,7 +72,7 @@ section {
   padding: 30px;
 }
 
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   section {
     padding: 60px;
   }
@@ -93,10 +93,19 @@ section {
   border-radius: 0.5rem;
   max-width: 100px;
 }
+
 #initials:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
+@media all and (max-width: 453px) {
+  #game-over label {
+    padding-bottom: var(--spacing);
+    display: block;
+  }
+}
+
 .button-wrapper {
   display: flex;
   flex-direction: column;
@@ -147,7 +156,7 @@ section {
   background-color: #7ab317;
 }
 
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   .button-wrapper {
     flex-direction: row;
   }
